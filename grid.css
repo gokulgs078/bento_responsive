@@ -1,0 +1,164 @@
+h1{text-align: center;}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    line-height: 1.1;
+    color: black;
+    background: #f9f9f9;
+    padding: 2rem 1rem;
+}
+
+/* text styles */
+h2{
+    /* font-size: var(--fs-heading); */
+    /* font-weight: var(--fw-500); */
+}
+
+h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+}
+
+h5{
+    color: rgb(27, 7, 7);
+}
+
+.create{
+    background-color: rgb(93, 34, 96);
+}
+
+.content{
+    background-color: rgb(63, 97, 218);
+}
+
+.media{
+    background-color: rgb(121, 75, 121);
+}
+
+.manage{
+    background-color: rgb(194, 182, 182);
+}
+
+.posting{
+    background-color: rgb(102, 102, 35);
+}
+
+.schedule{
+    background-color: rgb(62, 144, 202);
+
+}
+
+.audience{
+    background-color: rgb(179, 178, 178);
+
+}
+
+.followers{
+    background-color: rgb(67, 71, 142);
+
+}
+
+/* layout styles */
+
+.bento-grid-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 13rem 13rem 13rem;
+    grid-template-areas:
+        'column1 column2 column3'  
+        'column1 column2 column3'
+        'column1 column4 column4'
+    ;
+    gap: 1rem;
+    max-width: 60rem;
+    margin-inline: auto;
+    height: 100vh;
+    width: 100%;
+}
+
+.bento-grid-container > *, .inside-element {
+    display: grid;
+    gap: 1rem;
+}
+
+.bento-grid-item--element{
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.inside-element{
+    grid-template-columns: 1fr 1fr;
+}
+
+.inside-element:nth-child(1) {
+    /* border: 5px solid red; */
+    grid-template-columns: .95fr 2fr;
+}
+
+.column-one {
+    grid-area: column1;
+}
+
+.column-two {
+    grid-area: column2;
+}
+
+.column-three {
+    grid-area: column3;
+}
+
+.column-four {
+    grid-area: column4;
+}
+
+/* .cre_d{
+    background-color: white;
+} */
+
+
+
+@media screen and (max-width: 950px) {
+    .bento-grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 13rem 13rem 13rem 13rem;
+        grid-template-areas:
+            'column2 column3'  
+            'column2 column3'
+            'column4 column4'
+            'column1 column1'
+        ;
+    }
+
+    .column-one{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .bento-grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            'column2 '  
+            'column3 '
+            'column4 '
+            'column1 '
+        ;
+    }
+
+
+
+    .column-one{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bento-grid-item--element{
+        padding: 1rem;
+    }
+
+    /* .inside-element, .inside-element:nth-child(1) {
+        grid-template-columns: 1fr; */
+
+    }
